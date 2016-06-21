@@ -1,0 +1,8 @@
+C343 / Summer 2016
+Lab Mini-Assignment 01
+Bryan Brussee
+bbrussee
+
+I set up my IU github repository by visiting the site, logging in with my IU
+username and password, naming my repository and selecting the "C343 Summer" 
+option.
