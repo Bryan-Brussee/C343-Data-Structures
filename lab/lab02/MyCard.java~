@@ -1,0 +1,26 @@
+import 
+public class MyCard implements Card{
+    
+public void initialize() {
+	String[] suit = {"clubs", "diamonds", "hearts", "spades"} 
+	String[] rank = {"2", "3", "4", "5", "6", "7", "8", "9", "10","J", "Q", "K", "A"}
+	int decklength = suit.length * rank.length;
+	String[] deck = new String[decklength];
+	for (int i = 0; i < rank.length; i++) {
+	    for (int j = 0; j < 4; i++) {
+	        deck[suit.length*i + j] = rank[i] + " of " + SUITS[j];
+		}    
+	}
+
+    public String drawRandomCard();{
+
+
+    }
+
+    public static void main(String args[]){
+	MyCard test = new MyCard();
+	System.out.println(test);
+
+    }
+
+}
