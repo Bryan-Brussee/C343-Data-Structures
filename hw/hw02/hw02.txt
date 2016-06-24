@@ -1,0 +1,32 @@
+C343/Summer 2016
+Homework 2
+Bryan Brussee
+bbrussee
+
+Task A
+
+a) Theta(1)
+
+b) Theta(n)
+
+c) Theta(n^2)
+
+d) Theta(n^2)
+
+e) Theta(n log n)
+
+f) Theta(n log n)
+
+g) Theta(n^2 log n)
+
+h) Theta(n^2)
+
+Task B.1
+
+A two-dimensional array of integers should include the basic operations
+- insert new integers into the list
+- print itself
+- tell the user if there is still room (in this case placeholder 0 values) 
+- It should return the number of integers it can store
+- It should be able to remove an integer from the list, in this case 
+replacing it with a zero
