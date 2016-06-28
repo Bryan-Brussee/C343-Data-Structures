@@ -1,0 +1,21 @@
+public class Tweet {
+
+    public static String content = new String "";
+
+    public static String author = new String "";
+
+
+    public void printTweet() {
+
+	System.out.println(content);
+    }
+
+
+
+
+
+
+
+
+
+}

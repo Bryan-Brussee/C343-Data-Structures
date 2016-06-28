@@ -1,0 +1,15 @@
+C343 / Summer 2016
+Lab Mini-Assignment 03
+Bryan Brussee
+bbrussee
+
+I designed my tweet class with 2 instance variables,
+one for the name of the author and one for the content of the text.
+
+I then wrote to methods, one to set the author and content of a new instance
+of the Tweet class, and another to print the content and the author.
+
+I wrote some test code in my main method to make sure the code worked
+as intended.
+
+
