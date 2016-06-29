@@ -15,13 +15,13 @@ b) O(n^3) and Omega(n^3)
 c)O(n log n) and Omega (n log n)
 
 4.1) If you're using a list, you should have imported as so:
-import java.util.*
+import java.util.*;
 
-If that's at the top of your code, simpley call the name of the list
+If that's at the top of your code, simply call the name of the list
 (let's say that here, it's called mylist), and use .remove(i) where i
 is the index of the element you'd like to remove.
 
-If all that stands, you're code to remove 15 from (2, 23, 15, 5, 9) should
+If all that stands, your code to remove 15 from (2, 23, 15, 5, 9) should
 look like
 
 mylist.remove(2);
