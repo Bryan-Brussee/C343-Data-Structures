@@ -1,0 +1,49 @@
+C343 / Summer 2016
+Homework 03
+Bryan Brussee
+bbrussee
+
+
+3.3) 2, log3n, log2n, n^2/3, 20n, 4n^3, 3^n
+
+3.8)
+
+a) O(n) and Omega(n)
+
+b) O(n^3) and Omega(n^3)
+
+c)O(n log n) and Omega (n log n)
+
+4.1) If you're using a list, you should have imported as so:
+import java.util.*
+
+If that's at the top of your code, simpley call the name of the list
+(let's say that here, it's called mylist), and use .remove(i) where i
+is the index of the element you'd like to remove.
+
+If all that stands, you're code to remove 15 from (2, 23, 15, 5, 9) should
+look like
+
+mylist.remove(2);
+
+because 15 is at index 2. 
+
+4.11)
+
+The break-even equation is n > DE/(P+E).
+
+a)D = 20, P = 4, E = 8, so the break-even point is 13.33. 
+The linked list will be more efficient than the array when there are 
+less than 14 elements  being stored.
+
+b)D = 30, P = 4, E = 2, so the break-even point is 10.
+The linked list will be more efficient than the array when there are
+less than 10 elements being stored.
+
+c)D = 30, P = 4, E = 1, so the break-even point is 6.
+The linked list will be more efficient than the array when there are 
+less than 6 elements being stored.
+
+d)D = 40, P = 4, E = 32, so the break-even point is 35.55555.
+The linked list will be more efficient than the array when there are 
+less than 36 elements being stored.
