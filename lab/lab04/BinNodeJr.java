@@ -73,9 +73,18 @@ public class BinNodeJr <E extends Comparable<?super E>>{
 		
 	    // find() needs to be implemented
 	   System.out.println("is A in the tree? " + root.find("A"));
+	   System.out.println("is B in the tree? " + root.find("B"));
+	   System.out.println("is C in the tree? " + root.find("C"));
+	   System.out.println("is E in the tree? " + root.find("E"));
+	   System.out.println("is M in the tree? " + root.find("M"));
+
+
 	    // find (40) should return true
 	   System.out.println("is Z in the tree? " + root.find("Z"));
-	   System.out.println("is F in the tree? " + root.find("F"));
+	   System.out.println("is Q in the tree? " + root.find("Q"));
+	   System.out.println("is W in the tree? " + root.find("W"));
+
+	   //System.out.println("is F in the tree? " + root.find("F"));
 	    // find (100) should return false
 	}
 }
