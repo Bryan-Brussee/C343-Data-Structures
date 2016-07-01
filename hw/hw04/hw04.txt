@@ -1,0 +1,27 @@
+C343 / Summer 2016
+Homework 04
+Bryan Brussee
+bbrussee
+
+1) The BST property is defined so that nodes with equal values are 
+stored in the right subtree only so that they can be found in binary searches.
+If they were stored in either the right or left subtree, they would be 
+difficult to find; an algorithm would need to search both subtrees or choose
+one randomly and risk missing the desired node. Making a node of equal value to
+its parent the right subtree also maintains the invariablity of the BST by
+codifying exactly how to maintain the order of nodes even when a child node
+shares as value as its parent.
+
+2) a)                     15
+                         /  \		        
+		        5    20
+		         \   / \
+		          7 18 25
+		            /
+                           16
+   b) Preorder: 15(7), 5(2), 7(1), 20(4), 18(2), 16(1), 25(1)
+      Inorder: 5(2), 7(1), 15(7), 16(1), 18(2), 20(4), 25(1)
+      Postorder: 7(1), 5(2), 16(1), 18(2), 25(1), 20(4), 15(7)
+
+3) In a max heap, a parent node is greater than or equal to its children.
+Thus, the smallest element in a max heap must be stored in a leaf node.
