@@ -58,56 +58,41 @@ public class BSTJr <K extends Comparable<?super K>> {
 	if(entry.getRight() != null) preorder(entry.getRight());
     }
 
-    public boolean balance(BinNode<K> node) {
+    public int height(BinNode<K> node) {
 	//base case
-	if (node == null) {return true;}
+	if (node == null) {return 0;}
 	//iterate through the left subtree
-	boolean lbalance = balance(node.getLeft());
+	int lheight = height(node.getLeft());
 	//iterate through the right subtree
-	boolean rbalance = balance(node.getRight());
+	int rheight = height(node.getRight());
 	//counts the depth of the left and right subtrees and adds +1
 	//(to count for  the root node) to the longer strand
-	if (lbalance && rbalance == true) {return true;}
-	    } else {
-		this.unbalanced == node;
-		return false;
+	if(Math.abs(rheight - lheight) > 1) {this.unbalanced = node;}
+	if (lheight > rheight) {return lheight + 1;
+		} 
+		else {
+		return rheight + 1;
 	}
     }
-    //For each node, calculate the heights of its left subtree and its right subtree. 
-    //If the difference between the two heights is greater than 1, then the node is unbalanced.
-    //A tree is unbalanced if at least one node is unbalanced.
-    public boolean checkBalance(BinNode<K> node) {
-	//base case
-	if (node == null) { return true; }
-	//calculates the height of left subtree
-	int lheight = height(node.getLeft());
-	//calculates the height of the right subtree
-	int rheight = height(node.getRight());
-
-	//we can only say a tree is balanced when
-	//the difference between the height of the left and right subtree
-	//is no greater than one. 
-	if (Math.abs(lheight - rheight) <= 1)
-	    {return true;}
-	return false;
-    }
-
-	public boolean newBalance(BinNode<K> node) {
-		if (node == null){};
-		int lheight = height
 
 
+	public boolean balance() {
+		if (this.unbalanced != null) {return false;
+			} else {
 
-	}
-	
+		return true; }
+		
+	}	
     public static void main(String[] argv) {
 	BSTJr<Integer> tree = new BSTJr<Integer>();
 	Integer[] ks = {20, 10, 30, 35, 11, 29, 31};
 	tree.build(ks);
 	int test = tree.height(tree.root);
 	System.out.println("The height of this tree is " + test);
-	boolean test2 = tree.checkBalance(tree.root);
-	System.out.println("This tree is balanced: " + test2); 
+//	boolean test2 = tree.checkBalance(tree.root);
+//	System.out.println("This tree is balanced: " + test2); 
+	boolean test2 = tree.balance();
+	System.out.println("This tree is balanced: " + test2);
 	tree.display();
     }
 }
