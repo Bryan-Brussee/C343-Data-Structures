@@ -25,4 +25,5 @@ value the same - we only need to change that when moving right.
 
 Theory courtesy of our textbook and stackoverflow, in which a commentor
 provided the general rules of a BST and how a tree's size relates to it's potential
-to contain the nth smallest element.
+to contain the nth smallest element. No code was used, just concepts.
+
