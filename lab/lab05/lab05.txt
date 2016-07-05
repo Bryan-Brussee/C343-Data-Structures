@@ -16,11 +16,13 @@ organized, the nth smallest element has a size of n in the left subtree.
 
 If the size of the left subtree is less than n, there's no way it can contain
 the nth smallest value. Thus, here we should focus on our right subtree. 
-And so we recur on the right subtree.
+And so we recur on the right subtree, subtracting from n the size of the
+left subtree.
 
 If the size of the left subtree is greater than n, then we know we need to
-further examine this subtree. So we recur on the left subtree  
+further examine this subtree. So we recur on the left subtree and keep our n
+value the same - we only need to change that when moving right.
 
 Theory courtesy of our textbook and stackoverflow, in which a commentor
-provided the general rules of a BST and a tree's size relates to it's potential
+provided the general rules of a BST and how a tree's size relates to it's potential
 to contain the nth smallest element.
