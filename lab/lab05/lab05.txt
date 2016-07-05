@@ -1,0 +1,26 @@
+C343/Summer 2016
+Lab Mini-Assignment 05
+Bryan Brussee
+bbrussee
+
+Okay. Let's outline this algorithm. In a binary search tree, elements smaller 
+than a node are stored in its left subtree, and elements greater than that
+value are placed in its right subtree. This is 
+basic: it's the invariable rule of what makes a BST.
+
+The BinNode.java file can store the size of a node (that is, how many elements,
+including its own, are stored in its depth). If a node in a BST is searching
+for the nth smallest element, this will come in handy. For instance,
+let's say we know the size of a node's left subtree. Because of how they are
+organized, the nth smallest element has a size of n in the left subtree.
+
+If the size of the left subtree is less than n, there's no way it can contain
+the nth smallest value. Thus, here we should focus on our right subtree. 
+And so we recur on the right subtree.
+
+If the size of the left subtree is greater than n, then we know we need to
+further examine this subtree. So we recur on the left subtree  
+
+Theory courtesy of our textbook and stackoverflow, in which a commentor
+provided the general rules of a BST and a tree's size relates to it's potential
+to contain the nth smallest element.
