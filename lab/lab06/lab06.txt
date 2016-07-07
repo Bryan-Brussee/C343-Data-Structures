@@ -1,0 +1,47 @@
+C343/ Summer 2016
+Lab Mini-Assignment 06
+Bryan Brussee
+bbrussee
+
+A) Textbook Exercise 5.32
+
+a) This data comes sorted, so building a BST will result in the least efficient
+BST imaginable, so that's off the table. My data already comes sorted, I don't 
+need a stored linked-list or array. Even though an array is better for
+searching, the linked-list here is better to use because of the number of
+insertions this data set calls for.
+
+Thus, I would use "a linked-list of unsorted records"
+
+b) Because there are far more insertions than there are searches, I would
+use a linked-list. Because the data comes random, I want my data sorted.
+
+Thus, I would use "a linked- list maintained in sorted order.
+
+c) There is an equal number of insertions and deletions and searches,
+so right now I have no huge preference over an array or a linked-list
+(even though, as I said in A, I a linked-list is probably better).
+Luckily, the data comes sorted, which leads to believe a BST will have a
+relatively short depth, and thus be the most efficient.
+
+Thus, I would use "a binary search tree."
+
+d) Because there are so many more searches than there are insertions, I would like
+to use an array. Because the data comes random and I want to access it
+efficiently, I want my data sorted.
+
+Thus, I would use "an array-based list maintained in sorted order."
+
+B) Huffman Coding for Genome Compression
+
+The uncompressed avg character size is 2 bits per character. 
+To compress this, I can assign a single bit to the two most popular 
+letters, and assign two bits to the remaining letters.
+
+So, lets calculate the avg number of bits for our compressed DNA sequence
+
+(1 bit)(.5 for A) + (1 bit)(.35 for T) + (2 bit)(.10 for C) + (2 bit)(.05 for G) = 1.15
+
+1.15 is our compressed avg char size.
+
+So, 2/1.15 = 1.74 about, which is our compression ratio.
