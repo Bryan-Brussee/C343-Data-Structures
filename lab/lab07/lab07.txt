@@ -1,0 +1,13 @@
+C343 Summer 2016
+Lab Mini-Assignment 07
+Bryan Brussee
+bbrussee
+
+1) This is divide and conquor algorithm in that it keeps dividing the 
+data set in half.
+
+2) The larger the set, the more times the program will likely have to 
+divide the overall data set in half. It will do this less than N times,
+though N does affect the amount of times it will have to be done.
+I believe it operates in theta(log n) time.
+

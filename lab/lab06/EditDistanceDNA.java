@@ -17,8 +17,8 @@ public class EditDistanceDNA {
 	for(int i = 1; i < m; i ++)  {
 	    for(int j = 1; j < n; j ++) {
 		int c = 0;
-		if(a.charAt(i) == b.charAt(j)){ c = 0; }
-                else {c = 1;} 
+		if(a.charAt(i) == b.charAt(j)){ c = c; }
+                else {c = c + 1;} 
                 d[i][j] = Math.min(d[i-1][j] + 1, Math.min(d[i][j-1] + 1, d[i-1][j-1] + c));
 		    }
 	}
