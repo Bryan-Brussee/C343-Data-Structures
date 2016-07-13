@@ -1,0 +1,34 @@
+C343/Summer 2016
+Homework 06
+Bryan Brussee
+bbrussee
+
+Task A
+
+a) I would create a counter that keeps track of the smallest number and then
+I would iterate through the data, comparing each element to the counter and updating as necessasry. 
+I would not sort the data. This algorithm operates at theta(n) time.
+b) I would create a counter that keeps track of the largest number and then I would iterate
+through the data, comparing each element to the counter and updating as necessary. I would not sort the data.
+This algorithm operates at theta(n) time.
+c) I would add every element from the list and divide by the size of the list. I do not need to sort 
+the list to add up all the elements in it, so I won't. This operates at theta(n) time.
+d) You need a list of numbers that either increase or decrease in order to calculate a median, 
+so I would want to sort my list first. Then I would access the N/2 index and retrieve my median.
+This last step takes constant time. The sorting should take theta(n log n) if I'm using a decent 
+algorithm like Mergesort, quicksort, etc. So this algorithm as a whole takes theta(n log n) time.
+e) I would want to sort the data into a histogram. I would do this by creating a second array
+of length k + 1(that is, the highest number in the data set + 1). Then I would iterate through
+the original array, incrementing my new array at each index for each value in my origina array
+(so if I A[0] = 5, I would do B[5] +=1). Then I would need to check this final array for a max value,
+and return the index of that max value, which is the most frequent value from my original array.
+This would take: theta(n) to calculate a maximum + theta(n) to sort my original array into a new histogram
+array + theta(n) access and return this new maximum value from my histogram array. That simplifies down
+to a total runtime of theta(n). 
+
+Task B.2
+This algorithm will only be efficient when k is relatively close to or less than n. When it is significantly
+greater, the algorithm will take much longer (as the size of the intermediary array is dependent upon k,
+and a greater k means more elements in the intermediary B array to iterate through).
+If k > n, the asymptotic runtime will be theta(n + k).
+If k < n, the asymptotic runtime will be theta(n).
