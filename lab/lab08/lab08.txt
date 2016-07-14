@@ -1,0 +1,10 @@
+C343/Summer 2016
+Lab Mini-Assignment 08
+Bryan Brussee
+bbrussee
+
+
+I used a hashmap, mostly because I like how it sounds. From what I can tell, you assign each
+entry a key and a value. Keys need to be unique (in this case, the words) and values
+could be whatever (in this case they were lines and entries with the same values 
+were expected).
