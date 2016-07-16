@@ -5,23 +5,23 @@ bbrussee
 
 In our group is:
 Myself
-Jena Hanes (jrhanes)
-Daniel Nelson (dajanels)
-James Sowinski (japasowi)
+Jena Hanes (jrhanes@umail)
+Daniel Nelson (dajanels@umail)
+James Sowinski (japasowi@umail)
 
 Textbook Exercise 9.10
 
-def E transpose(E[] mylist, E searchValue) {
-wheneve mylist is acessed {
-for (int i = 0; i < mylist.length(); i++) {
-	if (mylist[i] == searchvalue) {
+def void transpose(E[] myarray, E searchValue) {
+//whenever my arraylist is searched, I want to do this.
+for (int i = 0; i < myarray.length(); i++) {
+	if (myarray[i] == searchvalue) {
 	swapvalue = myarray[i - 1];
 	accessed = mylist[i];
 	myarray[i-1] = accessed;
 	myarray[i] = swapvalue; 
-	return accessed;
-	} 
-	mylist.add(searchValue);
+	return;
+	}
+	myarray.add(searchValue);
     }
 }
 
@@ -32,16 +32,18 @@ within the hashtable - negative numbers will be assigned negative slots,
 which don't exist. So, h(k) does not map every k to a slot. 
 
 b) This is a hash function, but seeing as it maps every k to the same slot,
-it is an awful hash function.
+it is an awful hash function. Lots of collisions.
 
-c) This is a hash function. Ideally, n would be a large number. If it's too
-small, the wrap-around from the modulo will return the same value often,
-and with so many collisions, this won't be a very efficient system.
+c) This is a hash function. But it only works for insertion, and not searches.
+It's impossible to figure out what random number was used for insertion,
+so while you will be able to run the hash function in assigning keys
+to slots, you won't be able to retrieve that data.
 
 d) This also appears to be a hash function, but it depends on the size of n
-relative to the size of k. With n being a prime number, it's equally likely
-to spit out any value less than itself and greater than 0. So if K is large,
-it shouldn't create a ton of collisions.
+relative to the size of k. Typically with hash functions, you want more values
+in the key range than you have slots in the hash table. This function
+provides exactly as many values in the key range as slots it has, so as long
+as n is sufficiently large, this will be an excellent hash function.
 
 Textbook Exercise 9.14
 
