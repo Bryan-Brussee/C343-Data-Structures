@@ -1,0 +1,45 @@
+Team Green
+Bryan Brussee (bbrussee)
+Jena Hanes (jrhanes)
+Daniel Nelson (dajanels)
+James Sowinski (japasowi)
+
+Arrays
+(i) Can we only use integers as keys in arrays?
+
+Dictionaries
+(ii) What precisely are the exact differences between arrays and dictionaries besides time complexity?
+(iii) Is a dictionary a combination of linked lists and arrays?
+(iv) What is the ADT for a dictionary?
+
+Algorithms / Time
+(v) How does the dictionary achieve such awesome time complexity?
+(vi) Do values need to be sorted in a dictionary?
+(vii) How do we search through an array in theta(1) by key when arrays use indices?
+(viii) How do we insert in theta(1) with no duplicate keys?
+
+A dictionary is an abstract data type (so there is no ADT for dictionaries). (-iv-) As an ADT, a dictionary is defined with a type and a set of operations but the operations are not defined. Specifically the Dictionary ADT has methods to insert, search, and remove all in constant time. In contrast, an array is a data structure (meaning it has an implementation with data types and functions defined for it) and it can be used to implement ADTs, but it itself is not an ADT. (-ii-)
+
+The Dictionary ADT does not require that elements (key/value pairs) be inserted in order and there is no presorting. (-vi-) The dictionary ADT does not allow elements to have the same key so when insertion is attempted with an element with a key that has already been assigned, feasibly overwrite would occur. In the implementation of a dictionary, this is referred to as a collisions and it is a classic example of the well-known Pigeon Hole principle.
+
+A dictionary can be implemented with an unsorted or sorted array, a linked list, trees (various types), and a hash table.
+
+Implementation of a dictionary as an array really works best when the key is an integer. Arrays can only use integers as "keys" because arrays use the integers in an arithmetic formula to compute the memory location of the data at the index in the array. (-i-) When a dictionary is implemented as an array, we search for an element by key which is the same as accessing an element in an array based on the index - that will give us theta(1). So when we search based on a key value, it is really just a matter of accessing that element. (-vii-) But if we search based on the value part of the key/value pair, it will take theta(n) time to iterate through and look at all the values in the array. Typically delete in an array costs theta(n) time because we have to shift all the elements down. In a situation in which the index value must be preserved as the key, we would not want to shift but we could end up with a lot of wasted space (hence we don't end up with the higher time complexity but in exchange we get huge space complexity).
+
+A dictionary could still be feasibly implemented as an array even when the key is not an integer; we could have some other array (i.e. a look up table) that stores the key as a value and we could then use the index of that table as a key. However, this implementation could easily become unrealistic very quickly in terms of space.
+
+A dictionary can be implemented with linked lists but similar issues arise as with an array in terms of space and time complexity.
+
+The "awesome" time complexity we discussed in class -theta(1)- on the operations of search, insert, and delete can be achieved when a dictionary is implemented as a hash table (or hash map). Elements are stored and accessed based on their key values. It should be noted that the "awesome" time to perform search is the result of this being a precise search - accessing elements based on key values - and hence, searching within ranges (as is afforded with a binary search tree) is not possible. (-v-)
+
+The key value collisions that are innate with the dictionary ADT are (1) avoided in the construction of a hash table by using hashing functions and (2) resolved with procedures such as "open hashing."
+
+Hash functions do computation on a key to assign it to a slot in a hash table. Hash functions can be used on strings, characters, integers, and other data types. A sample hash function is given by h(k) = k mod n where k is the original key and n is the length of the table. This function is reasonably sufficient but it is better to use a prime number for n as this decreases the likelihood of further collisions (there are less common denominators of prime numbers than, for example even numbers). Given a string as a key, some hash functions convert the string to an integer (for example, by returning the number of characters in a string) and then use modulo n to determine its hash slot. In each example, the hash function ensures an even distribution of keys so as to reduce the likelihood of collisions.
+
+
+
+Collisions that do occur can be resolved with procedures like open hashing. In open hashing (or sometimes called chaining), the elements with the same key values are placed in a linked list. Therefore, in this implementation, a hash table can be a lot like a combination of an array and a linked list (where elements with the same key value are in a linked list that is stored at that position in the array). We must keep in mind that when a dictionary is implemented using an array of linked lists, keys must be integers or it must use a hash function. (-iii-)
+
+Collisions can also be resolved with closed hashing. In closed hashing, items hashed to a key that has already been assigned are shifted to another available slot by various methods including linear probing (where we look at the slot given by key + 1) and quadratic probing (where we look at the slot given by key^2).
+
+Time complexity of an insert into a hash table is constant because it is merely a matter of assignment at a particular key value. Fortunately, implementation of a hashing function (which again, typically involves computation and assignment) in a random access machine model can be carried out in constant time (theta(1)) so the time complexity of the insert does not change. (-viii-)
