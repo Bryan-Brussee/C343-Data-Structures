@@ -1,0 +1,15 @@
+// a simple Java implementation of MiniGraph using adjacency lists
+// C343 Summer 2016
+ 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Vector;
+ 
+public class MyMiniGraph implements MiniGraph {
+    private int totalNodes;
+    private Vector<String> nodeList;
+    private int totalEdges;
+    private Vector<LinkedList<Integer>>  adjList; // Adjacency list
+    public MyMiniGraph() {
+        init();
+    }
