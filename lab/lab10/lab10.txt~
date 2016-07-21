@@ -1,0 +1,15 @@
+C343/Summer 2016
+Lab Mini-Assignment 10
+Bryan Brussee
+bbrussee
+
+Task A
+
+public void checkDAG(vertex R, graph G) {
+       for (vertices in graph) {
+       	      	   
+
+
+      }
+
+}

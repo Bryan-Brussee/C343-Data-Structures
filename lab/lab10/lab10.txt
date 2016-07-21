@@ -1,0 +1,18 @@
+C343/Summer 2016
+Lab Mini-Assignment 10
+Bryan Brussee
+bbrussee
+
+Task A
+
+public void checkDAG(graph G) {
+       int graphsize = G.getSize
+       for (vertex in G) {
+       	  for (everyothervertex in G) {
+	      int count = 0;
+	      if (pathexists(vertex, everyothervertex) == true) {count++;}
+	      if (count == graphsize) {System.out.println("The root is " + vertex);}
+	      }	     	   
+      }
+
+}
