@@ -1,0 +1,35 @@
+C343/Summer 2016
+Homework 09 Task B
+Bryan Brussee
+bbrussee
+
+Textbook Exercise 11.9
+
+In the worse case, Dijkstra's algorithm's time complexity is O(E+V log V).
+It uses a queue that could be contains all of the vertices, 
+and the main loop could execute until this queue is empty. This is O(v).
+We also need to examine all of each nodes neighbors. We may have to visit all of them.
+This takes another O(E), because each neighbor is connected by an edge.
+Assuming this is using queues, popping will take O(log V) assuming heap implementation
+in the priority queue.
+So, in the worst case, the code runs E+V times and takes log V for each.
+Thus, Dijkstra's algorithm has a worst case run time of O(E+V log V).
+
+Textbook Exercise 11.10
+
+ vertices included      |   1   2   3   4   5   6
+     --------------------------------------------
+     {}                 |  inf inf inf  0  inf inf 
+     --------------------------------------------
+     {4}                |  20   5  inf  0  11  10
+     --------------------------------------------
+     {4, 2}             |  15   5   8   0  11  10 
+     --------------------------------------------
+     {4, 2, 3}          |  15   5   8   0  11  10
+     --------------------------------------------
+     {4, 2, 3, 6}       |  15   5   8   0  11  10 
+     --------------------------------------------
+     {4, 2, 3, 6, 5}    |  12   5   8   0  11  10
+     --------------------------------------------
+     {4, 2, 3, 5, 6, 1} |  12   5   8   0  11  10 
+     --------------------------------------------
